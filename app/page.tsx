@@ -35,18 +35,18 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="space-y-4">
-                <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm text-primary-foreground">
+                <div className="inline-block rounded-lg bg-white text-black font-medium px-3 py-1 text-sm ">
                   Elecciones Legislativas 2025
                 </div>
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
+                <h1 className="text-white text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
                   San Isidro para los Sanisidrenses
                 </h1>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl">
+                <p className="max-w-[600px] text-white md:text-xl">
                   Juntos vamos a construir un futuro mejor con políticas innovadoras y soluciones reales para los problemas
                   de nuestra comunidad.
                 </p>
                 <div className="flex flex-col gap-2 min-[500px]:flex-row">
-                  <Button size="lg">
+                  <Button size="lg" className="bg-white text-black font-medium">
                     Conoce nuestras propuestas
                     <ChevronRight className="ml-2 h-4 w-4" />
                   </Button>
@@ -57,7 +57,7 @@ export default function Home() {
               </div>
               <div className="mx-auto lg:order-last">
                 <Image
-                  src="/boulogneiluminada.webp"
+                  src="/logosinbackul.png"
                   width={450}
                   height={550}
                   alt="Imagen de campaña"
@@ -120,8 +120,8 @@ export default function Home() {
                 <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm text-primary-foreground">
                   Nuestros Temas
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Pilares de Nuestra Plataforma</h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <h2 className="text-white text-3xl font-bold tracking-tighter sm:text-5xl">Pilares de Nuestra Plataforma</h2>
+                <p className="max-w-[900px] text-white md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Estos son los cuatro ejes fundamentales que guían nuestras propuestas y proyectos para transformar
                   nuestra comunidad.
                 </p>
