@@ -10,7 +10,7 @@ export default function Home() {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2 font-bold">
-            <span className="text-xl">Movimiento Futuro</span>
+            <span className="text-xl">Unión Liberal San Isidro</span>
           </div>
           <nav className="hidden md:flex gap-6">
             <Link href="#inicio" className="text-sm font-medium transition-colors hover:text-primary">
@@ -36,28 +36,28 @@ export default function Home() {
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="space-y-4">
                 <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm text-primary-foreground">
-                  Elecciones 2025
+                  Elecciones Legislativas 2025
                 </div>
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-                  Un Nuevo Futuro Para Nuestra Comunidad
+                  San Isidro para los Sanisidrenses
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                  Juntos construiremos un futuro mejor con políticas innovadoras y soluciones reales para los problemas
+                  Juntos vamos a construir un futuro mejor con políticas innovadoras y soluciones reales para los problemas
                   de nuestra comunidad.
                 </p>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <div className="flex flex-col gap-2 min-[500px]:flex-row">
                   <Button size="lg">
                     Conoce nuestras propuestas
                     <ChevronRight className="ml-2 h-4 w-4" />
                   </Button>
                   <Button variant="outline" size="lg">
-                    Únete al movimiento
+                    Aporta tús ideas
                   </Button>
                 </div>
               </div>
               <div className="mx-auto lg:order-last">
                 <Image
-                  src="/placeholder.svg?height=550&width=450"
+                  src="/boulogneiluminada.webp"
                   width={450}
                   height={550}
                   alt="Imagen de campaña"
@@ -74,7 +74,7 @@ export default function Home() {
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="mx-auto">
                 <Image
-                  src="/placeholder.svg?height=500&width=400"
+                  src="/franPerfil.png?height=500&width=400"
                   width={400}
                   height={500}
                   alt="Foto del candidato"
@@ -82,8 +82,8 @@ export default function Home() {
                 />
               </div>
               <div className="space-y-4">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Carlos Rodríguez</h2>
-                <p className="text-xl font-medium text-primary">Candidato a la Presidencia</p>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Francisco Sicardi de Estrada</h2>
+                <p className="text-xl font-medium text-primary">Candidato a concejal</p>
                 <p className="text-muted-foreground">
                   Con más de 20 años de experiencia en servicio público, Carlos ha dedicado su vida a mejorar las
                   condiciones de nuestra comunidad. Su visión de un futuro más justo, sostenible y próspero ha inspirado
@@ -92,19 +92,19 @@ export default function Home() {
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <ChevronRight className="mr-2 h-4 w-4 text-primary" />
-                    <span>Licenciado en Ciencias Políticas</span>
+                    <span>Especialista en Politicas Públicas</span>
                   </li>
                   <li className="flex items-center">
                     <ChevronRight className="mr-2 h-4 w-4 text-primary" />
-                    <span>Ex-Secretario de Desarrollo Social</span>
+                    <span>Abogado</span>
                   </li>
                   <li className="flex items-center">
                     <ChevronRight className="mr-2 h-4 w-4 text-primary" />
-                    <span>Fundador de la Iniciativa Ciudadana por la Transparencia</span>
+                    <span>Fundador de la ONG Themis Observa</span>
                   </li>
                 </ul>
                 <Button>
-                  Conoce más sobre Carlos
+                  Conoce más sobre Francisco
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </div>
@@ -201,7 +201,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <Image
-                    src="/placeholder.svg?height=200&width=350"
+                    src="/educacionjpg.webp?height=200&width=350"
                     width={350}
                     height={200}
                     alt="Imagen de proyecto educativo"
@@ -222,7 +222,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <Image
-                    src="/placeholder.svg?height=200&width=350"
+                    src="/infraverde.jpeg?height=200&width=350"
                     width={350}
                     height={200}
                     alt="Imagen de proyecto de infraestructura"
@@ -243,7 +243,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <Image
-                    src="/placeholder.svg?height=200&width=350"
+                    src="/concejo.jpeg?height=200&width=350"
                     width={350}
                     height={200}
                     alt="Imagen de proyecto de digitalización"
@@ -264,7 +264,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <Image
-                    src="/placeholder.svg?height=200&width=350"
+                    src="/hospital_boulogne_0.jpg?height=200&width=350"
                     width={350}
                     height={200}
                     alt="Imagen de proyecto de salud"
@@ -285,7 +285,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <Image
-                    src="/placeholder.svg?height=200&width=350"
+                    src="/local.webp?height=200&width=350"
                     width={350}
                     height={200}
                     alt="Imagen de proyecto de emprendimiento"
@@ -306,7 +306,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <Image
-                    src="/placeholder.svg?height=200&width=350"
+                    src="/participacionciudadana.webp?height=200&width=350"
                     width={350}
                     height={200}
                     alt="Imagen de proyecto de participación"
@@ -330,9 +330,10 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Únete al Movimiento</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Sumá tús ideas</h2>
                 <p className="mx-auto max-w-[700px] md:text-xl">
-                  Sé parte del cambio que nuestra comunidad necesita. Juntos podemos construir un futuro mejor para
+                  Sé parte del cambio que nuestra comunidad necesita. <br/>
+                  Juntos podemos construir un futuro mejor para
                   todos.
                 </p>
               </div>
@@ -355,15 +356,10 @@ export default function Home() {
       <footer className="w-full border-t py-6 md:py-0">
         <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
           <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-            © 2025 Movimiento Futuro. Todos los derechos reservados.
+            © 2025 Unión Liberal San Isidro. Todos los derechos reservados.
           </p>
           <div className="flex gap-4">
-            <Link href="#" className="text-sm font-medium transition-colors hover:text-primary">
-              Términos
-            </Link>
-            <Link href="#" className="text-sm font-medium transition-colors hover:text-primary">
-              Privacidad
-            </Link>
+ 
             <Link href="#" className="text-sm font-medium transition-colors hover:text-primary">
               Contacto
             </Link>
