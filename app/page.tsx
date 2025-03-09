@@ -1,101 +1,376 @@
-import Image from "next/image";
+import Image from "next/image"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { ChevronRight, Users, Building, Scale, Landmark, ArrowRight } from "lucide-react"
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="flex min-h-screen flex-col">
+      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="container flex h-16 items-center justify-between">
+          <div className="flex items-center gap-2 font-bold">
+            <span className="text-xl">Movimiento Futuro</span>
+          </div>
+          <nav className="hidden md:flex gap-6">
+            <Link href="#inicio" className="text-sm font-medium transition-colors hover:text-primary">
+              Inicio
+            </Link>
+            <Link href="#candidato" className="text-sm font-medium transition-colors hover:text-primary">
+              Candidato
+            </Link>
+            <Link href="#temas" className="text-sm font-medium transition-colors hover:text-primary">
+              Temas
+            </Link>
+            <Link href="#proyectos" className="text-sm font-medium transition-colors hover:text-primary">
+              Proyectos
+            </Link>
+          </nav>
+          <Button>Contacto</Button>
         </div>
+      </header>
+      <main className="flex-1">
+        {/* Hero Section */}
+        <section id="inicio" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
+          <div className="container px-4 md:px-6">
+            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+              <div className="space-y-4">
+                <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm text-primary-foreground">
+                  Elecciones 2025
+                </div>
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
+                  Un Nuevo Futuro Para Nuestra Comunidad
+                </h1>
+                <p className="max-w-[600px] text-muted-foreground md:text-xl">
+                  Juntos construiremos un futuro mejor con políticas innovadoras y soluciones reales para los problemas
+                  de nuestra comunidad.
+                </p>
+                <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                  <Button size="lg">
+                    Conoce nuestras propuestas
+                    <ChevronRight className="ml-2 h-4 w-4" />
+                  </Button>
+                  <Button variant="outline" size="lg">
+                    Únete al movimiento
+                  </Button>
+                </div>
+              </div>
+              <div className="mx-auto lg:order-last">
+                <Image
+                  src="/placeholder.svg?height=550&width=450"
+                  width={450}
+                  height={550}
+                  alt="Imagen de campaña"
+                  className="rounded-xl object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Candidate Section */}
+        <section id="candidato" className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container px-4 md:px-6">
+            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+              <div className="mx-auto">
+                <Image
+                  src="/placeholder.svg?height=500&width=400"
+                  width={400}
+                  height={500}
+                  alt="Foto del candidato"
+                  className="rounded-xl object-cover"
+                />
+              </div>
+              <div className="space-y-4">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Carlos Rodríguez</h2>
+                <p className="text-xl font-medium text-primary">Candidato a la Presidencia</p>
+                <p className="text-muted-foreground">
+                  Con más de 20 años de experiencia en servicio público, Carlos ha dedicado su vida a mejorar las
+                  condiciones de nuestra comunidad. Su visión de un futuro más justo, sostenible y próspero ha inspirado
+                  a miles de ciudadanos.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-center">
+                    <ChevronRight className="mr-2 h-4 w-4 text-primary" />
+                    <span>Licenciado en Ciencias Políticas</span>
+                  </li>
+                  <li className="flex items-center">
+                    <ChevronRight className="mr-2 h-4 w-4 text-primary" />
+                    <span>Ex-Secretario de Desarrollo Social</span>
+                  </li>
+                  <li className="flex items-center">
+                    <ChevronRight className="mr-2 h-4 w-4 text-primary" />
+                    <span>Fundador de la Iniciativa Ciudadana por la Transparencia</span>
+                  </li>
+                </ul>
+                <Button>
+                  Conoce más sobre Carlos
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Topics Section */}
+        <section id="temas" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm text-primary-foreground">
+                  Nuestros Temas
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Pilares de Nuestra Plataforma</h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Estos son los cuatro ejes fundamentales que guían nuestras propuestas y proyectos para transformar
+                  nuestra comunidad.
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 mt-8">
+              <Card>
+                <CardHeader className="pb-2">
+                  <Users className="h-12 w-12 text-primary mb-2" />
+                  <CardTitle>Desarrollo Social</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Políticas inclusivas que garanticen el acceso a servicios básicos, educación de calidad y
+                    oportunidades para todos.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader className="pb-2">
+                  <Building className="h-12 w-12 text-primary mb-2" />
+                  <CardTitle>Economía Sostenible</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Impulso a la economía local, apoyo a emprendedores y creación de empleos dignos con enfoque en
+                    sostenibilidad.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader className="pb-2">
+                  <Scale className="h-12 w-12 text-primary mb-2" />
+                  <CardTitle>Justicia y Seguridad</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Reforma del sistema judicial, políticas de prevención del delito y fortalecimiento de la seguridad
+                    ciudadana.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader className="pb-2">
+                  <Landmark className="h-12 w-12 text-primary mb-2" />
+                  <CardTitle>Transparencia</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    Gobierno abierto, rendición de cuentas y participación ciudadana en la toma de decisiones públicas.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Projects Section */}
+        <section id="proyectos" className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm text-primary-foreground">
+                  Proyectos
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Nuestros Proyectos Prioritarios</h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Iniciativas concretas que implementaremos para transformar nuestra comunidad y mejorar la calidad de
+                  vida de todos los ciudadanos.
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 mt-8">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Reforma Educativa Integral</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <Image
+                    src="/placeholder.svg?height=200&width=350"
+                    width={350}
+                    height={200}
+                    alt="Imagen de proyecto educativo"
+                    className="rounded-lg object-cover mb-4"
+                  />
+                  <CardDescription>
+                    Modernización del sistema educativo con enfoque en habilidades digitales, pensamiento crítico y
+                    preparación para los empleos del futuro.
+                  </CardDescription>
+                  <Button variant="outline" className="w-full mt-4">
+                    Ver detalles
+                  </Button>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle>Plan de Infraestructura Verde</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <Image
+                    src="/placeholder.svg?height=200&width=350"
+                    width={350}
+                    height={200}
+                    alt="Imagen de proyecto de infraestructura"
+                    className="rounded-lg object-cover mb-4"
+                  />
+                  <CardDescription>
+                    Desarrollo de espacios públicos sostenibles, transporte limpio y edificios energéticamente
+                    eficientes para una ciudad más habitable.
+                  </CardDescription>
+                  <Button variant="outline" className="w-full mt-4">
+                    Ver detalles
+                  </Button>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle>Digitalización de Servicios Públicos</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <Image
+                    src="/placeholder.svg?height=200&width=350"
+                    width={350}
+                    height={200}
+                    alt="Imagen de proyecto de digitalización"
+                    className="rounded-lg object-cover mb-4"
+                  />
+                  <CardDescription>
+                    Implementación de plataformas digitales para agilizar trámites, reducir burocracia y facilitar el
+                    acceso a servicios gubernamentales.
+                  </CardDescription>
+                  <Button variant="outline" className="w-full mt-4">
+                    Ver detalles
+                  </Button>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle>Programa de Salud Comunitaria</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <Image
+                    src="/placeholder.svg?height=200&width=350"
+                    width={350}
+                    height={200}
+                    alt="Imagen de proyecto de salud"
+                    className="rounded-lg object-cover mb-4"
+                  />
+                  <CardDescription>
+                    Red de centros de atención primaria con enfoque preventivo y acceso universal a servicios médicos
+                    básicos en todas las comunidades.
+                  </CardDescription>
+                  <Button variant="outline" className="w-full mt-4">
+                    Ver detalles
+                  </Button>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle>Incubadora de Emprendimientos</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <Image
+                    src="/placeholder.svg?height=200&width=350"
+                    width={350}
+                    height={200}
+                    alt="Imagen de proyecto de emprendimiento"
+                    className="rounded-lg object-cover mb-4"
+                  />
+                  <CardDescription>
+                    Apoyo integral a nuevos negocios con financiamiento, mentoría y espacios de trabajo colaborativo
+                    para impulsar la economía local.
+                  </CardDescription>
+                  <Button variant="outline" className="w-full mt-4">
+                    Ver detalles
+                  </Button>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle>Sistema de Participación Ciudadana</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <Image
+                    src="/placeholder.svg?height=200&width=350"
+                    width={350}
+                    height={200}
+                    alt="Imagen de proyecto de participación"
+                    className="rounded-lg object-cover mb-4"
+                  />
+                  <CardDescription>
+                    Plataforma para que los ciudadanos propongan, voten y monitoreen proyectos comunitarios con
+                    presupuesto participativo.
+                  </CardDescription>
+                  <Button variant="outline" className="w-full mt-4">
+                    Ver detalles
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-primary text-primary-foreground">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Únete al Movimiento</h2>
+                <p className="mx-auto max-w-[700px] md:text-xl">
+                  Sé parte del cambio que nuestra comunidad necesita. Juntos podemos construir un futuro mejor para
+                  todos.
+                </p>
+              </div>
+              <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <Button size="lg" variant="secondary">
+                  Voluntariado
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="bg-transparent text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                >
+                  Donar a la campaña
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      <footer className="w-full border-t py-6 md:py-0">
+        <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
+          <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
+            © 2025 Movimiento Futuro. Todos los derechos reservados.
+          </p>
+          <div className="flex gap-4">
+            <Link href="#" className="text-sm font-medium transition-colors hover:text-primary">
+              Términos
+            </Link>
+            <Link href="#" className="text-sm font-medium transition-colors hover:text-primary">
+              Privacidad
+            </Link>
+            <Link href="#" className="text-sm font-medium transition-colors hover:text-primary">
+              Contacto
+            </Link>
+          </div>
+        </div>
       </footer>
     </div>
-  );
+  )
 }
+
