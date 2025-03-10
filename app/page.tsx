@@ -85,7 +85,7 @@ export default function Home() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Francisco Sicardi de Estrada</h2>
                 <p className="text-xl font-medium text-primary">Candidato a concejal</p>
                 <p className="text-muted-foreground">
-                  Con más de 20 años de experiencia en servicio público, Carlos ha dedicado su vida a mejorar las
+                  Con más de 20 años de experiencia en servicio público, Francisco ha dedicado su vida a mejorar las
                   condiciones de nuestra comunidad. Su visión de un futuro más justo, sostenible y próspero ha inspirado
                   a miles de ciudadanos.
                 </p>
