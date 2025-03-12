@@ -83,20 +83,18 @@ export default function Home() {
               </div>
               <div className="space-y-4">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Francisco Sicardi de Estrada</h2>
-                <p className="text-xl font-medium text-primary">Candidato a concejal</p>
+                <p className="text-xl font-medium text-primary">Candidato a concejal por Unión Liberal ex UCEDE</p>
                 <p className="text-muted-foreground">
-                  Con más de 20 años de experiencia en servicio público, Francisco ha dedicado su vida a mejorar las
-                  condiciones de nuestra comunidad. Su visión de un futuro más justo, sostenible y próspero ha inspirado
-                  a miles de ciudadanos.
+                  Forma parte del mismo partido desde hace 30 años. Liberal en lo economico, Conservador en los valores. Defensor de la República y de la Familia.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <ChevronRight className="mr-2 h-4 w-4 text-primary" />
-                    <span>Especialista en Politicas Públicas</span>
+                    <span>Abogado</span>
                   </li>
                   <li className="flex items-center">
                     <ChevronRight className="mr-2 h-4 w-4 text-primary" />
-                    <span>Abogado</span>
+                    <span>Especialista en Politicas Públicas</span>
                   </li>
                   <li className="flex items-center">
                     <ChevronRight className="mr-2 h-4 w-4 text-primary" />
@@ -332,7 +330,7 @@ export default function Home() {
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Sumá tús ideas</h2>
                 <p className="mx-auto max-w-[700px] md:text-xl">
-                  Sé parte del cambio que nuestra comunidad necesita. <br/>
+                  Sé parte del cambio que nuestra comunidad necesita. <br />
                   Juntos podemos construir un futuro mejor para
                   todos.
                 </p>
@@ -359,7 +357,7 @@ export default function Home() {
             © 2025 Unión Liberal San Isidro. Todos los derechos reservados.
           </p>
           <div className="flex gap-4">
- 
+
             <Link href="#" className="text-sm font-medium transition-colors hover:text-primary">
               Contacto
             </Link>
