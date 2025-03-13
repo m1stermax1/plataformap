@@ -3,6 +3,15 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ChevronRight, Users, Building, Scale, Landmark, ArrowRight } from "lucide-react"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+
 
 export default function Home() {
   return (
@@ -47,12 +56,26 @@ export default function Home() {
                 </p>
                 <div className="flex flex-col gap-2 min-[500px]:flex-row">
                   <Button size="lg" className="bg-white text-black font-medium">
-                    Conoce nuestras propuestas
+                    <Link href="#proyectos">Conoce nuestras propuestas</Link>
                     <ChevronRight className="ml-2 h-4 w-4" />
                   </Button>
-                  <Button variant="outline" size="lg">
-                    Aporta tús ideas
-                  </Button>
+
+                  <Dialog>
+                    <DialogTrigger>
+                      <Button variant="outline" size="lg">
+                        Aporta tús ideas
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent>
+                      <DialogHeader>
+                        <DialogTitle>Dejanos tu aporte</DialogTitle>
+                        <DialogDescription>
+                          This action cannot be undone. This will permanently delete your account
+                          and remove your data from our servers.
+                        </DialogDescription>
+                      </DialogHeader>
+                    </DialogContent>
+                  </Dialog>
                 </div>
               </div>
               <div className="mx-auto lg:order-last">
@@ -209,9 +232,9 @@ export default function Home() {
                     Modernización del sistema educativo con enfoque en habilidades digitales, pensamiento crítico y
                     preparación para los empleos del futuro.
                   </CardDescription>
-                  <Button variant="outline" className="w-full mt-4">
+                  {/* <Button variant="outline" className="w-full mt-4">
                     Ver detalles
-                  </Button>
+                  </Button> */}
                 </CardContent>
               </Card>
               <Card>
@@ -230,9 +253,9 @@ export default function Home() {
                     Desarrollo de espacios públicos sostenibles, transporte limpio y edificios energéticamente
                     eficientes para una ciudad más habitable.
                   </CardDescription>
-                  <Button variant="outline" className="w-full mt-4">
+                  {/* <Button variant="outline" className="w-full mt-4">
                     Ver detalles
-                  </Button>
+                  </Button> */}
                 </CardContent>
               </Card>
               <Card>
@@ -251,9 +274,9 @@ export default function Home() {
                     Implementación de plataformas digitales para agilizar trámites, reducir burocracia y facilitar el
                     acceso a servicios gubernamentales.
                   </CardDescription>
-                  <Button variant="outline" className="w-full mt-4">
+                  {/* <Button variant="outline" className="w-full mt-4">
                     Ver detalles
-                  </Button>
+                  </Button> */}
                 </CardContent>
               </Card>
               <Card>
@@ -272,9 +295,9 @@ export default function Home() {
                     Red de centros de atención primaria con enfoque preventivo y acceso universal a servicios médicos
                     básicos en todas las comunidades.
                   </CardDescription>
-                  <Button variant="outline" className="w-full mt-4">
+                  {/* <Button variant="outline" className="w-full mt-4">
                     Ver detalles
-                  </Button>
+                  </Button> */}
                 </CardContent>
               </Card>
               <Card>
@@ -293,9 +316,9 @@ export default function Home() {
                     Apoyo integral a nuevos negocios con financiamiento, mentoría y espacios de trabajo colaborativo
                     para impulsar la economía local.
                   </CardDescription>
-                  <Button variant="outline" className="w-full mt-4">
+                  {/* <Button variant="outline" className="w-full mt-4">
                     Ver detalles
-                  </Button>
+                  </Button> */}
                 </CardContent>
               </Card>
               <Card>
@@ -314,9 +337,9 @@ export default function Home() {
                     Plataforma para que los ciudadanos propongan, voten y monitoreen proyectos comunitarios con
                     presupuesto participativo.
                   </CardDescription>
-                  <Button variant="outline" className="w-full mt-4">
+                  {/* <Button variant="outline" className="w-full mt-4">
                     Ver detalles
-                  </Button>
+                  </Button> */}
                 </CardContent>
               </Card>
             </div>
