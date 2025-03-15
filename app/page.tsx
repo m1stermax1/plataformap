@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { ChevronRight, Users, Building, Scale, Landmark, ArrowRight } from "lucide-react"
+import { ChevronRight, Users, Building, Scale, Landmark, ArrowRight, Instagram, AtSign, Twitter, Facebook } from "lucide-react"
 import {
   Dialog,
   DialogContent,
@@ -35,7 +35,11 @@ export default function Home() {
               Proyectos
             </Link>
           </nav>
-          <Button>Contacto</Button>
+          <Button>
+            <Link href="#suma" className="text-sm font-medium transition-colors hover:text-primary">
+              Contacto
+            </Link>
+          </Button>
         </div>
       </header>
       <main className="flex-1">
@@ -59,23 +63,6 @@ export default function Home() {
                     <Link href="#proyectos">Conoce nuestras propuestas</Link>
                     <ChevronRight className="ml-2 h-4 w-4" />
                   </Button>
-
-                  <Dialog>
-                    <DialogTrigger>
-                      <Button variant="outline" size="lg">
-                        Aporta tús ideas
-                      </Button>
-                    </DialogTrigger>
-                    <DialogContent>
-                      <DialogHeader>
-                        <DialogTitle>Dejanos tu aporte</DialogTitle>
-                        <DialogDescription>
-                          This action cannot be undone. This will permanently delete your account
-                          and remove your data from our servers.
-                        </DialogDescription>
-                      </DialogHeader>
-                    </DialogContent>
-                  </Dialog>
                 </div>
               </div>
               <div className="mx-auto lg:order-last">
@@ -108,7 +95,7 @@ export default function Home() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Francisco Sicardi de Estrada</h2>
                 <p className="text-xl font-medium text-primary">Candidato a concejal por Unión Liberal ex UCEDE</p>
                 <p className="text-muted-foreground">
-                  Forma parte del mismo partido desde hace 30 años. Liberal en lo economico, Conservador en los valores. Defensor de la República y de la Familia.
+                  Forma parte del mismo partido desde hace 30 años. Liberal en lo económico, conservador en los valores. Defensor de la República y de la Familia.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center">
@@ -117,17 +104,17 @@ export default function Home() {
                   </li>
                   <li className="flex items-center">
                     <ChevronRight className="mr-2 h-4 w-4 text-primary" />
-                    <span>Especialista en Politicas Públicas</span>
+                    <span>Especialista en Políticas Públicas</span>
                   </li>
                   <li className="flex items-center">
                     <ChevronRight className="mr-2 h-4 w-4 text-primary" />
                     <span>Fundador de la ONG Themis Observa</span>
                   </li>
                 </ul>
-                <Button>
+                {/* <Button>
                   Conoce más sobre Francisco
                   <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+                </Button> */}
               </div>
             </div>
           </div>
@@ -347,28 +334,36 @@ export default function Home() {
         </section>
 
         {/* CTA Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-primary text-primary-foreground">
+        <section id="suma" className="w-full py-12 md:py-24 lg:py-32 bg-primary text-primary-foreground">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Sumá tús ideas</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Sumá tus ideas</h2>
                 <p className="mx-auto max-w-[700px] md:text-xl">
                   Sé parte del cambio que nuestra comunidad necesita. <br />
-                  Juntos podemos construir un futuro mejor para
-                  todos.
+                  Comunícate a través de nuestras redes sociales.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Button size="lg" variant="secondary">
-                  Voluntariado
+                  <Facebook></Facebook>Facebook
                 </Button>
-                <Button
+                <Button size="lg" variant="secondary">
+                  <Instagram></Instagram><Link href="https://www.instagram.com/ulsanisidro/" target="_blank">Instagram</Link>
+                </Button>
+                <Button size="lg" variant="secondary">
+                  <AtSign></AtSign><Link href="https://www.tiktok.com/@unionliberalsanisidro" target="_blank">TikTok</Link>
+                </Button>
+                <Button size="lg" variant="secondary">
+                  <Twitter></Twitter> Twitter
+                </Button>
+                {/* <Button
                   size="lg"
                   variant="outline"
                   className="bg-transparent text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary"
                 >
                   Donar a la campaña
-                </Button>
+                </Button> */}
               </div>
             </div>
           </div>
@@ -377,14 +372,8 @@ export default function Home() {
       <footer className="w-full border-t py-6 md:py-0">
         <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
           <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-            © 2025 Unión Liberal San Isidro. Todos los derechos reservados.
+            © Unión Liberal San Isidro.
           </p>
-          <div className="flex gap-4">
-
-            <Link href="#" className="text-sm font-medium transition-colors hover:text-primary">
-              Contacto
-            </Link>
-          </div>
         </div>
       </footer>
     </div>
