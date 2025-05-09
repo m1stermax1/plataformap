@@ -2,15 +2,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { ChevronRight, Users, Building, Scale, Landmark, ArrowRight, Instagram, AtSign, Twitter, Facebook } from "lucide-react"
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog"
+import { ChevronRight, Instagram, AtSign, Twitter, Facebook } from "lucide-react"
+
 
 
 export default function Home() {
