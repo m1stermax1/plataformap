@@ -28,12 +28,12 @@ export default function Home() {
             <Link href="#candidato" className="text-sm font-medium transition-colors hover:text-primary">
               Candidato
             </Link>
-            <Link href="#temas" className="text-sm font-medium transition-colors hover:text-primary">
+            {/* <Link href="#temas" className="text-sm font-medium transition-colors hover:text-primary">
               Temas
             </Link>
             <Link href="#proyectos" className="text-sm font-medium transition-colors hover:text-primary">
               Proyectos
-            </Link>
+            </Link> */}
           </nav>
           <Button>
             <Link href="#suma" className="text-sm font-medium transition-colors hover:text-primary">
@@ -44,26 +44,34 @@ export default function Home() {
       </header>
       <main className="flex-1">
         {/* Hero Section */}
-        <section id="inicio" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
-          <div className="container px-4 md:px-6">
+        <section id="inicio" className="grid w-full bg-muted">
+          <Image
+            src="/concejo2.jpg"
+            width={400}
+            height={300}
+            alt="Foto del candidato"
+            className="object-cover w-full"
+            style={{ gridArea: "1/1", height: "710px", zIndex: 0 }}
+          />
+          <div style={{ gridArea: "1/1",backgroundColor: "hsl(232.02deg 94% 39.22% / 74%)", zIndex: 1 }}></div>
+          <div className="container px-4 md:px-6 md:py-24 lg:py-32"  style={{ gridArea: "1/1", zIndex: 2 }}>
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="space-y-4">
-                <div className="inline-block rounded-lg bg-white text-black font-medium px-3 py-1 text-sm ">
+                {/* <div className="inline-block rounded-lg bg-white text-black font-medium px-3 py-1 text-sm ">
                   Elecciones Legislativas 2025
-                </div>
+                </div> */}
                 <h1 className="text-white text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-                  San Isidro para los Sanisidrenses
+                  No somos oposición. Somos una mejor opción.
                 </h1>
                 <p className="max-w-[600px] text-white md:text-xl">
-                  Juntos vamos a construir un futuro mejor con políticas innovadoras y soluciones reales para los problemas
-                  de nuestra comunidad.
+                  Llevemos las ideas liberales al Concejo Deliberante.
                 </p>
-                <div className="flex flex-col gap-2 min-[500px]:flex-row">
+                {/* <div className="flex flex-col gap-2 min-[500px]:flex-row">
                   <Button size="lg" className="bg-white text-black font-medium">
                     <Link href="#proyectos">Conoce nuestras propuestas</Link>
                     <ChevronRight className="ml-2 h-4 w-4" />
                   </Button>
-                </div>
+                </div> */}
               </div>
               <div className="mx-auto lg:order-last">
                 <Image
@@ -120,8 +128,53 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="candidato" className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container px-4 md:px-6">
+            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+
+              <div className="space-y-4">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Roxana Laura Marga</h2>
+                <p className="text-xl font-medium text-primary">Candidata a Concejal por Unión Liberal ex UCEDE</p>
+                <p className="text-muted-foreground">
+                  A través de la Fundación Accionarte capacitan y apoyan a emprendedores. <br />
+                  Tiene una destacada trayectoria en la lucha de la violencia de género,el abuso y maltrato infantil y las Adicciones.<br />
+                  Promoviendo el bienestar y la educación.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-center">
+                    <ChevronRight className="mr-2 h-4 w-4 text-primary" />
+                    <span>Psicopedagoga</span>
+                  </li>
+                  <li className="flex items-center">
+                    <ChevronRight className="mr-2 h-4 w-4 text-primary" />
+                    <span>Directora de la Fundación Accionarte</span>
+                  </li>
+                  <li className="flex items-center">
+                    <ChevronRight className="mr-2 h-4 w-4 text-primary" />
+                    <span>Productora de radio</span>
+                  </li>
+                  <li className="flex items-center">
+                    <ChevronRight className="mr-2 h-4 w-4 text-primary" />
+                    <span>Escritora</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="mx-auto">
+                <Image
+                  src="/roxanaPerfil.png?height=500&width=400"
+                  width={400}
+                  height={500}
+                  alt="Foto del candidato"
+                  className="rounded-xl object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Topics Section */}
-        <section id="temas" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
+        {/* <section id="temas" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -185,10 +238,10 @@ export default function Home() {
               </Card>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Projects Section */}
-        <section id="proyectos" className="w-full py-12 md:py-24 lg:py-32">
+        <section id="proyectos" className="w-full py-12 md:py-24 lg:py-32 hidden">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
