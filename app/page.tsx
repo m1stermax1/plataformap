@@ -19,7 +19,7 @@ export default function Home() {
               Inicio
             </Link>
             <Link href="#candidato" className="text-sm font-medium transition-colors hover:text-primary">
-              Candidato
+              Candidatos
             </Link>
             {/* <Link href="#temas" className="text-sm font-medium transition-colors hover:text-primary">
               Temas
@@ -42,22 +42,22 @@ export default function Home() {
             src="/concejo2.jpg"
             width={400}
             height={300}
-            alt="Foto del candidato"
+            alt="background del concejo"
             className="object-cover w-full"
             style={{ gridArea: "1/1", height: "710px", zIndex: 0 }}
           />
           <div style={{ gridArea: "1/1",backgroundColor: "hsl(232.02deg 94% 39.22% / 74%)", zIndex: 1 }}></div>
-          <div className="container px-4 md:px-6 md:py-24 lg:py-32"  style={{ gridArea: "1/1", zIndex: 2 }}>
+          <div className="container px-4 md:px-6 md:py-24 lg:py-30"  style={{ gridArea: "1/1", zIndex: 2 }}>
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="space-y-4">
-                {/* <div className="inline-block rounded-lg bg-white text-black font-medium px-3 py-1 text-sm ">
+                <div className="inline-block rounded-lg bg-white text-black font-medium px-3 py-1 text-sm ">
                   Elecciones Legislativas 2025
-                </div> */}
+                </div>
                 <h1 className="text-white text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
                   No somos oposición. Somos una mejor opción.
                 </h1>
                 <p className="max-w-[600px] text-white md:text-xl">
-                  Llevemos las ideas liberales al Concejo Deliberante.
+                  Llevemos las ideas liberales al Concejo Deliberante y construyamos un San Isidro para los Sanisidrenses.
                 </p>
                 {/* <div className="flex flex-col gap-2 min-[500px]:flex-row">
                   <Button size="lg" className="bg-white text-black font-medium">
@@ -68,7 +68,7 @@ export default function Home() {
               </div>
               <div className="mx-auto lg:order-last">
                 <Image
-                  src="/logosinbackul.png"
+                  src="/unionliberal.png"
                   width={450}
                   height={550}
                   alt="Imagen de campaña"
@@ -118,13 +118,7 @@ export default function Home() {
                 </Button> */}
               </div>
             </div>
-          </div>
-        </section>
-
-        <section id="candidato" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
-
+              <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="space-y-4">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Roxana Laura Marga</h2>
                 <p className="text-xl font-medium text-primary">Candidata a Concejal por Unión Liberal ex UCEDE</p>
@@ -152,7 +146,6 @@ export default function Home() {
                   </li>
                 </ul>
               </div>
-
               <div className="mx-auto">
                 <Image
                   src="/roxanaPerfil.png?height=500&width=400"
@@ -166,14 +159,12 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Topics Section */}
-        {/* <section id="temas" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
+        Topics Section
+        <section id="temas" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm text-primary-foreground">
-                  Nuestros Temas
-                </div>
+   
                 <h2 className="text-white text-3xl font-bold tracking-tighter sm:text-5xl">Pilares de Nuestra Plataforma</h2>
                 <p className="max-w-[900px] text-white md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Estos son los cuatro ejes fundamentales que guían nuestras propuestas y proyectos para transformar
@@ -184,54 +175,51 @@ export default function Home() {
             <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 mt-8">
               <Card>
                 <CardHeader className="pb-2">
-                  <Users className="h-12 w-12 text-primary mb-2" />
-                  <CardTitle>Desarrollo Social</CardTitle>
+                  {/* <Users className="h-12 w-12 text-primary mb-2" /> */}
+                  <CardTitle>Economía</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
-                    Políticas inclusivas que garanticen el acceso a servicios básicos, educación de calidad y
-                    oportunidades para todos.
+                    Queremos reducir la cargar impositiva para todos los vecinos y premiar aquellos que son cumplidores.
                   </CardDescription>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader className="pb-2">
-                  <Building className="h-12 w-12 text-primary mb-2" />
-                  <CardTitle>Economía Sostenible</CardTitle>
+                  {/* <Building className="h-12 w-12 text-primary mb-2" /> */}
+                  <CardTitle>Salud</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
-                    Impulso a la economía local, apoyo a emprendedores y creación de empleos dignos con enfoque en
-                    sostenibilidad.
+                    La Salud debe ser primero para los Sanisidrenses y de forma rápida.
                   </CardDescription>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader className="pb-2">
-                  <Scale className="h-12 w-12 text-primary mb-2" />
-                  <CardTitle>Justicia y Seguridad</CardTitle>
+                  {/* <Scale className="h-12 w-12 text-primary mb-2" /> */}
+                  <CardTitle>Seguridad</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
-                    Reforma del sistema judicial, políticas de prevención del delito y fortalecimiento de la seguridad
-                    ciudadana.
+                    Aumentar el equipamiento de prevención con cámaras y postas policiales en zonas de alto delito.
                   </CardDescription>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader className="pb-2">
-                  <Landmark className="h-12 w-12 text-primary mb-2" />
+                  {/* <Landmark className="h-12 w-12 text-primary mb-2" /> */}
                   <CardTitle>Transparencia</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
-                    Gobierno abierto, rendición de cuentas y participación ciudadana en la toma de decisiones públicas.
+                    Los contribuyentes debemos saber en qué se gastan la plata que se recauda.
                   </CardDescription>
                 </CardContent>
               </Card>
             </div>
           </div>
-        </section> */}
+        </section>
 
         {/* Projects Section */}
         <section id="proyectos" className="w-full py-12 md:py-24 lg:py-32 hidden">
@@ -392,7 +380,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Button size="lg" variant="secondary">
-                  <Facebook></Facebook>Facebook
+                  <Facebook></Facebook><Link href="https://www.facebook.com/unionliberalsi" target="_blank">Facebook</Link>
                 </Button>
                 <Button size="lg" variant="secondary">
                   <Instagram></Instagram><Link href="https://www.instagram.com/ulsanisidro/" target="_blank">Instagram</Link>
@@ -401,7 +389,7 @@ export default function Home() {
                   <AtSign></AtSign><Link href="https://www.tiktok.com/@unionliberalsanisidro" target="_blank">TikTok</Link>
                 </Button>
                 <Button size="lg" variant="secondary">
-                  <Twitter></Twitter> Twitter
+                  <Twitter></Twitter> <Link href="https://x.com/ulsanisidro" target="_blank">X</Link>
                 </Button>
                 {/* <Button
                   size="lg"
