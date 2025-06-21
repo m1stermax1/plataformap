@@ -58,3 +58,26 @@
   }
 }
 
+[src="/_next/image?url=%2Fhospital_boulogne_0.jpg&w=750&q=75"], [src="/_next/image?url=%2Fburocracia.jpg&w=750&q=75"], [src="/_next/image?url=%2Ftransparencia.jpeg&w=750&q=75"] {
+  height: 125px;
+}
+
+.contactoFinal {
+  grid-template-columns: 1fr 1fr;
+}
+
+.contactoFinal .ideas {
+   grid-area: 1/1;
+}
+.contactoFinal .formulario {
+   grid-area: 1/2;
+   width: fit-content;
+}
+
+.formulario > div {
+  width: 500px;
+}
+
+.formulario > div > div {
+  padding: 1.5rem;
+}
