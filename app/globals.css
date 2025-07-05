@@ -53,12 +53,15 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
 
-[src="/_next/image?url=%2Fhospital_boulogne_0.jpg&w=750&q=75"], [src="/_next/image?url=%2Fburocracia.jpg&w=750&q=75"], [src="/_next/image?url=%2Ftransparencia.jpeg&w=750&q=75"] {
+[src="/_next/image?url=%2Fhospital_boulogne_0.jpg&w=750&q=75"],
+[src="/_next/image?url=%2Fburocracia.jpg&w=750&q=75"],
+[src="/_next/image?url=%2Ftransparencia.jpeg&w=750&q=75"] {
   height: 125px;
 }
 
@@ -67,17 +70,32 @@
 }
 
 .contactoFinal .ideas {
-   grid-area: 1/1;
+  grid-area: 1/1;
 }
+
 .contactoFinal .formulario {
-   grid-area: 1/2;
-   width: fit-content;
+  grid-area: 1/2;
 }
 
-.formulario > div {
-  width: 500px;
+.formulario>div {
+  
+    width: 100%;
+    max-width: 500px;
+    justify-self: center;
 }
 
-.formulario > div > div {
+.formulario>div>div {
   padding: 1.5rem;
+}
+
+
+@media (max-width: 1150px) {
+  .contactoFinal {
+    grid-template-columns: 1fr;
+    row-gap: 4rem;
+  }
+
+  .contactoFinal .formulario {
+    grid-area: 2/1;
+  }
 }

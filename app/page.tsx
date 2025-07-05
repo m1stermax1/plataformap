@@ -73,7 +73,7 @@ export default function Home() {
             }}
           ></div>
           <div
-            className="container px-4 md:px-6 md:py-24 lg:py-30"
+            className="container p-4 px-4 md:px-6 md:py-24 lg:py-30"
             style={{ gridArea: "1/1", zIndex: 2 }}
           >
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
